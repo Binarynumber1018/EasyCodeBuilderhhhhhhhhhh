@@ -33,7 +33,7 @@ $(function(){
 </head>
 <body>
 
-<header class="head-fixed">
+<header class="head-hero">
 <div class="container">
 	<div class="container-small">
 		<a href="index.html" class="headA">EasyCodeBuilder</a>
@@ -59,7 +59,7 @@ $(function(){
 	<img src="img/logo.svg" alt="">
 	<h1>Easy Code Builder</h1>
 	<p>~簡単にプログラミングを~</p>
-	<a href="twitter.com">Easy Code Builderをダウンロード</a>
+	<a href="#">Easy Code Builderをダウンロード</a>
 </div>
 </section>
 
@@ -205,6 +205,26 @@ $(function(){
 </div>
 </footer>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+function init() {
+	// スクロールして何ピクセルでアニメーションさせるか
+	var px_change	= 300;
+
+	// スクロールのイベントハンドラを登録
+	window.addEventListener('scroll', function(e){
+		// 変化するポイントまでスクロールしたらクラスを追加
+		if ( $(window).scrollTop() > px_change ) {
+			$("header").addClass("header-hero");
+
+		// 変化するポイント以前であればクラスを削除
+		} else if ( $("header").hasClass("header-hero") ) {
+			$("header").removeClass("header-hero");
+		}
+	});
+}
+window.onload = init();
+</script>
 
 </body>
 </html>
