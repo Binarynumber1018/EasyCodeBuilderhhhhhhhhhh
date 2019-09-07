@@ -6,7 +6,8 @@
 	--accent-color: rgb(13, 77, 97);
 	--header-font-color:rgb(22, 187, 16);
 	--dark-main-color: #2B5566;
-	--text-bright-color: #fff;
+	--text-bright-color: #FfF;
+	--header-newfont-color: #000;
 	--icon-color: #fff;
 	--icon-bk-color: #ddd;
 	--gray-color: #ddd;
@@ -970,7 +971,6 @@ header {
 	}
 }
 
-
 /* アレンジ: ヘッダーの色 */
 .head-color {
 	background-color: #5D9AB2;
@@ -989,16 +989,20 @@ header {
 }
 
 
+
 /* アレンジ: ヘッダーとヒーローイメージを一体化 */
 .head-hero {
 	background-color: transparent;
-	color: #fff;
+	color: rgb(255, 255, 255);
 	color: var(--text-bright-color);
+	position: fixed;
+	
 }
 
 .head-hero .headA {
 	background-color: transparent;
 	color: inherit;
+	
 }
 
 .head-hero .headC {
@@ -1008,7 +1012,7 @@ header {
 
 @media (max-width: 767px) {
 	.head-hero .headB {
-		background-color: rgba(0,0,0,0.6);
+		background-color: rgba(80, 80, 80, 0.274);
 	}
 }
 
@@ -1021,4 +1025,6 @@ header {
 
 .nohero .head-fixed + * {
 	margin-top: 70px;
+	
 }
+
